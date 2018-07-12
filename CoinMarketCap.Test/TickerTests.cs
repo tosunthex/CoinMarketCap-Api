@@ -26,7 +26,7 @@ namespace CoinMarketCap.Test
         public async Task Ticker_With_Start_Parameter()
         {
             const int startId = 3;
-            var response = await _client.Ticker.GetTickers(startId, CryptoReturnLimit, SortBy.Id, Currency.USD);
+            var response = await _client.Ticker.GetTickers(startId, CryptoReturnLimit, SortBy.Id, Currency.Usd);
             Assert.Equal(response.Data.Values.First().Id, startId);
         }
 
@@ -34,14 +34,14 @@ namespace CoinMarketCap.Test
         public async Task Ticker_With_Limit_Must_Return_Two_Currency()
         {
             const int cryptoLimit = 2;
-            var response = await _client.Ticker.GetTickers(Start.StartId, cryptoLimit, SortBy.Rank, Currency.USD);
+            var response = await _client.Ticker.GetTickers(Start.StartId, cryptoLimit, SortBy.Rank, Currency.Usd);
             Assert.Equal(2, response.Data.Count);
         }
 
         [Fact]
         public async Task Ticker_Sort_By_Id()
         {
-            var response = await _client.Ticker.GetTickers(Start.StartId, CryptoReturnLimit, SortBy.Id, Currency.USD);
+            var response = await _client.Ticker.GetTickers(Start.StartId, CryptoReturnLimit, SortBy.Id, Currency.Usd);
             var responseArray = response.Data.Values.ToArray();
             for (var i = 1; i < responseArray.Length - 1; i++)
             {
@@ -55,7 +55,7 @@ namespace CoinMarketCap.Test
         [Fact]
         public async Task Ticker_Sort_By_Rank()
         {
-            var response = await _client.Ticker.GetTickers(Start.StartId, CryptoReturnLimit, SortBy.Rank, Currency.USD);
+            var response = await _client.Ticker.GetTickers(Start.StartId, CryptoReturnLimit, SortBy.Rank, Currency.Usd);
             var responseArray = response.Data.Values.ToArray();
             for (var i = 1; i < responseArray.Length - 1; i++)
             {
@@ -69,7 +69,7 @@ namespace CoinMarketCap.Test
         [Fact]
         public async Task Ticker_Sort_By_PercentChange24H()
         {
-            var response = await _client.Ticker.GetTickers(Start.StartId, CryptoReturnLimit, SortBy.PercentChange24H, Currency.USD);
+            var response = await _client.Ticker.GetTickers(Start.StartId, CryptoReturnLimit, SortBy.PercentChange24H, Currency.Usd);
             var responseArray = response.Data.Values.ToArray();
             for (var i = 1; i < responseArray.Length - 1; i++)
             {
@@ -83,7 +83,7 @@ namespace CoinMarketCap.Test
         [Fact]
         public async Task Ticker_Sort_By_Volume24H()
         {
-            var response = await _client.Ticker.GetTickers(Start.StartId, CryptoReturnLimit, SortBy.Volume24H, Currency.USD);
+            var response = await _client.Ticker.GetTickers(Start.StartId, CryptoReturnLimit, SortBy.Volume24H, Currency.Usd);
             var responseArray = response.Data.Values.ToArray();
             for (var i = 1; i < responseArray.Length - 1; i++)
             {
@@ -97,17 +97,17 @@ namespace CoinMarketCap.Test
         [Fact]
         public async Task Ticker_With_Currency_Parameter()
         {
-            var response = await _client.Ticker.GetTickers(Start.StartId, CryptoReturnLimit, SortBy.Id, Currency.EUR);
-            Assert.Equal(Currency.EUR, response.Data.Values.First().Quotes.Keys.Last());
+            var response = await _client.Ticker.GetTickers(Start.StartId, CryptoReturnLimit, SortBy.Id, Currency.Eur);
+            Assert.Equal(Currency.Eur, response.Data.Values.First().Quotes.Keys.Last());
         }
 
         [Fact]
         public async Task Ticker_With_Id()
         {
             const int XrpId = 52;
-            var response = await _client.Ticker.GetById(XrpId, Currency.BTC);
+            var response = await _client.Ticker.GetById(XrpId, Currency.Btc);
             Assert.Equal(XrpId, response.Data.Id);
-            Assert.Equal(Currency.BTC, response.Data.Quotes.Keys.Last());
+            Assert.Equal(Currency.Btc, response.Data.Quotes.Keys.Last());
         }
     }
 }

@@ -31,7 +31,7 @@ namespace CoinMarketCap.Reposity
             return GetTopCrypto(start,limit,sort,convert);
         }*/
 
-        public async Task<TickersData> GetTickers(int? start = Start.StartId, int? limit = Limit.Max, string sort = SortBy.Rank, string convert = Currency.USD)
+        public async Task<TickersData> GetTickers(int? start = Start.StartId, int? limit = Limit.Max, string sort = SortBy.Rank, string convert = Currency.Usd)
         {
             var startParam = start >= 1 ? $"start={start}" : null;
             var limitParam = limit >= 1 ? $"limit={limit}" : null;
