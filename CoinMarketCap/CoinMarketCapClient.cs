@@ -1,6 +1,5 @@
 ﻿using System;
 using CoinMarketCap.Reposity;
-using CryptoCompare.Reposity;
 
 namespace CoinMarketCap
 {

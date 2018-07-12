@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
 using CoinMarketCap.Model;
-using CoinMarketCap.Parameters;
 
-namespace CryptoCompare.Reposity
+namespace CoinMarketCap.Reposity
 {
     public interface ITickerReposity
     {

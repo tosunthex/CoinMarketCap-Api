@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard1.3;netstandard1.5;net461;net45</TargetFrameworks>
     <IncludeSymbols>True</IncludeSymbols>
     <PackageVersion>1.0.2</PackageVersion>
     <title>Coinmarketcap Client</title>
@@ -17,6 +17,18 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+    <PackageReference Include="Microsoft.AspNet.WebApi.SelfHost">
+      <Version>5.2.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+    <PackageReference Include="Microsoft.AspNet.WebApi.SelfHost">
+      <Version>5.2.2</Version>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

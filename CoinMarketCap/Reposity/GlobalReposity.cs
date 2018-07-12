@@ -4,8 +4,6 @@ using System.Threading.Tasks;
 using CoinMarketCap.Model;
 using CoinMarketCap.Parameters;
 using CoinMarketCap.Services;
-using CryptoCompare.Reposity;
-using CryptoCompare.Services;
 
 namespace CoinMarketCap.Reposity
 {

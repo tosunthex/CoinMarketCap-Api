@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace CryptoCompare.Services
+namespace CoinMarketCap.Services
 {
     public class JsonParserService
     {

@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using CoinMarketCap.Model;
 
-namespace CryptoCompare.Reposity
+namespace CoinMarketCap.Reposity
 {
     public interface IGlobalReposity
     {
