@@ -14,7 +14,7 @@ before_build:
   - cmd: dotnet restore --verbosity m
 build_script:
   - cmd: dotnet build -c Release
-  - cmd: dotnet publish --framework netstandard2.0 -c Release
+  #- cmd: dotnet publish --framework netstandard2.0 -c Release
 test_script:
   - cmd: cd CoinMarketCap.Test
   - cmd: dotnet test
