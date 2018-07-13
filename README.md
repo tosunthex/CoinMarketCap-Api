@@ -1,8 +1,8 @@
 # CoinMarketCap Api v2 Client
 
 CoinMarketCap API v2 client written in .Net Standart 2.0
-
-[![Build status](https://leventsaatci.visualstudio.com/CoinMarketCap/_apis/build/status/CoinMarketCap-ASP.NET%20Core-CI)](https://leventsaatci.visualstudio.com/CoinMarketCap/_build/latest?definitionId=8)[![NuGet](https://img.shields.io/nuget/v/CoinMarketCapApiV2Client.svg)](https://www.nuget.org/packages/CoinMarketCapApiV2Client/)
+[![Build status](https://ci.appveyor.com/api/projects/status/5b1vscy74feuungw?svg=true)](https://ci.appveyor.com/project/tosunthex/coinmarketcap-api)
+[![NuGet](https://img.shields.io/nuget/v/CoinMarketCapApiV2Client.svg)](https://www.nuget.org/packages/CoinMarketCapApiV2Client/)
 
 ## Installation
 This Coinmarketcap v2 api wrapper library is available on [NuGet](https://www.nuget.org/packages/CoinMarketCapApiV2Client/)
