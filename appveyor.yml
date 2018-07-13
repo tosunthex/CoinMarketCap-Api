@@ -12,7 +12,9 @@ before_build:
   - cmd: dotnet --version
   # Display minimal restore text
   - cmd: dotnet restore --verbosity m
-build_script:  
+build_script:
+  - cmd: dotnet build -c Release
+publish_script:  
   - cmd: dotnet publish --framework netstandard2.0 -c Release
 test_script:
   - cmd: cd CoinMarketCap.Test
