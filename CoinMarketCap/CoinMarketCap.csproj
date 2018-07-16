@@ -3,16 +3,28 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard1.3;netstandard1.5;net461;net45</TargetFrameworks>
     <IncludeSymbols>True</IncludeSymbols>
-    <PackageVersion>1.0.2</PackageVersion>
-    <title>Coinmarketcap Client</title>
+    <PackageVersion>1.0.3</PackageVersion>
+    <title>Coinmarketcap Api V2 Client</title>
     <Authors>Levent Saatci</Authors>
-    <Description>C# client to connect to coinmarketcap API v2</Description>
+    <Description>C# client connects to CoinMarketCap API v2</Description>
     <Copyright>Copyright 2018 (c). All rights reserved.</Copyright>
-    <PackageTags>coinmarketcap crypto client C# .net .netstandart standart</PackageTags>
+    <PackageTags>coinmarketcap v2 crypto client C# .net .netstandart standart</PackageTags>
+    <PackageLicenseUrl>http://choosealicense.com/licenses/bsd-2-clause/</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/tosunthex/CoinMarketCap-Api</PackageProjectUrl>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <PackageIconUrl>https://coindeal.com/images/images/icons/social/CoinMarketCap.png</PackageIconUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageId>CoinMarketCapApiV2Client</PackageId>
+    <Product>CoinMarketCap Api v2 Client</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\CoinMarketCap.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\CoinMarketCap.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
