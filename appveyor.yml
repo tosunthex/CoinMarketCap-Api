@@ -1,17 +1,21 @@
-version: '2.0.{build}'
+version: '1.0.{build}'
 image: Visual Studio 2017
 branches:
   only:
   - master
 clone_depth: 1
 init:
-  # Good practise, because Windows
+  # Good practise, because Windows line endings are different from Unix/Linux ones
   - cmd: git config --global core.autocrlf true
-install:
-  # Install repo specific stuff here
-  docker version
+before_build:
+  # Display .NET Core version
+  - cmd: dotnet --version
+  # Display minimal restore text
+  - cmd: dotnet restore --verbosity m
 build_script:
-  - docker build . -t tosunthex/Coinmarketcap
-on_finish :
-  # any cleanup in here
+  - cmd: dotnet build -c Release
+  #- cmd: dotnet publish --framework netstandard2.0 -c Release
+test_script:
+  - cmd: cd CoinMarketCap.Test
+  - cmd: dotnet test
 deploy: off
