@@ -19,16 +19,6 @@ namespace CoinMarketCap.Reposity
             queryStringService = new QueryStringService();
             jsonParserService = new JsonParserService();
         }
-
-        /*public Task<TickersData> GetTopCrypto()
-        {
-            const int start = Start.StartId;
-            const int limit = Limit.Max;
-            const string sort = SortBy.Rank;
-            const string convert = Currency.USD;  
-            return GetTopCrypto(start,limit,sort,convert);
-        }*/
-
         public async Task<TickersData> GetTickers(int? start = Start.StartId, int? limit = Limit.Max, string sort = SortBy.Rank, string convert = Currency.Usd)
         {
             var startParam = start >= 1 ? $"start={start}" : null;
