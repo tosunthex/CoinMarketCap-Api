@@ -16,6 +16,6 @@ build_script:
   - cmd: dotnet build -c Release
   #- cmd: dotnet publish --framework netstandard2.0 -c Release
 test_script:
-  - cmd: cd CoinMarketCap.Test
+  - cmd: cd CoinMarketCap.Tests
   - cmd: dotnet test
 deploy: off
