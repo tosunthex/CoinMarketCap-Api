@@ -11,7 +11,6 @@ namespace CoinMarketCap.Test
         {
             var client = CoinMarketCapClient.Instance;
             var response = await client.Listing.Get();
-            Console.WriteLine($"Data Count = {response.Data.Count}  NumCryptocurrencies = {response.Metadata.NumCryptocurrencies}");
             Assert.Equal(response.Data.Count, response.Metadata.NumCryptocurrencies);
         }
     }
