@@ -6,7 +6,7 @@ namespace CoinMarketCap.Services
 {
     public class JsonParserService
     {
-        public async Task<T> ParseResponse<T>(HttpResponseMessage httpResponseMessage)
+        public static async Task<T> ParseResponse<T>(HttpResponseMessage httpResponseMessage)
         {
             httpResponseMessage.EnsureSuccessStatusCode();
             var responseContent = await httpResponseMessage.Content.ReadAsStringAsync();
