@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using CoinMarketCap.Model;
@@ -16,12 +17,9 @@ namespace CoinMarketCap.Reposity
         }
         public async Task<ListingsData> Get()
         {
-            var querystringService = new QueryStringService();
-            var jsonParserService = new JsonParserService();
-
-            var url = querystringService.AppendQueryString(Endpoints.Listings,"");
+            var url = QueryStringService.AppendQueryString(Endpoints.Listings,new Dictionary<string, string>());
             var response = await _restClient.GetAsync(url);
-            return await jsonParserService.ParseResponse<ListingsData>(response);
+            return await JsonParserService.ParseResponse<ListingsData>(response);
         }
     }
 }
