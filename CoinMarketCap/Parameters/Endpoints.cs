@@ -2,9 +2,9 @@
 {
     public class Endpoints
     {
-        public const string Listings = "listings/";
-        public const string Ticker = "ticker/";
-        public const string GlobalData = "global/";
-        public const string CoinMarketCapApiUrl = "https://api.coinmarketcap.com/v2/";
+        public static string Listings => "listings/";
+        public static string Ticker => "ticker/";
+        public static string GlobalData => "global/";
+        public static string CoinMarketCapApiUrl => "https://api.coinmarketcap.com/v2/";
     }
 }

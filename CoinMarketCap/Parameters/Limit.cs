@@ -5,6 +5,6 @@
         /// <summary>
         /// Maximum return amount 100
         /// </summary>
-        public const int Max = 100;
+        public static int Max => 100;
     }
 }
