@@ -1,6 +1,6 @@
 ﻿namespace CoinMarketCap.Parameters
 {
-    public class Start
+    public static class Start
     {
         /// <summary>
         /// Default Starting Id

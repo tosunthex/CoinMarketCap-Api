@@ -1,6 +1,6 @@
 ﻿namespace CoinMarketCap.Parameters
 {
-    public class Endpoints
+    public static class Endpoints
     {
         public static string Listings => "listings/";
         public static string Ticker => "ticker/";

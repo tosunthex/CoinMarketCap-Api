@@ -1,6 +1,6 @@
 ﻿namespace CoinMarketCap.Parameters
 {
-    public class Limit
+    public static class Limit
     {
         /// <summary>
         /// Maximum return amount 100
