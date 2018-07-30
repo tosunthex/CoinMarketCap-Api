@@ -31,7 +31,7 @@ namespace CoinMarketCap
         public IListingsReposity Listing => new ListingReposity();
         public ITickerReposity Ticker => new TickerReposity();
 
-        void IDisposable.Dispose()
+        public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);

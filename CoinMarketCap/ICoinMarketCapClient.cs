@@ -3,7 +3,7 @@ using CoinMarketCap.Reposity;
 
 namespace CoinMarketCap
 {
-    public interface ICoinMarketCapClient:IDisposable
+    public interface ICoinMarketCapClient
     {
         IGlobalReposity Global { get; }
         IListingsReposity Listing { get; }
