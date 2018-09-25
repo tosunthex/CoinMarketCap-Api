@@ -1,3 +1,5 @@
+Please DOWNLOAD the LATEST [CoinMarketCap Pro Api](https://www.nuget.org/packages/CoinMarketCapProApi) 
+
 # CoinMarketCap Api v2 Client [![Build status](https://ci.appveyor.com/api/projects/status/5b1vscy74feuungw?svg=true)](https://ci.appveyor.com/project/tosunthex/coinmarketcap-api) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3f5cd54efbf149f19c25399a4dc9abc4)](https://www.codacy.com/project/tosunthex/CoinMarketCap-Api/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tosunthex/CoinMarketCap-Api&amp;utm_campaign=Badge_Grade_Dashboard) [![NuGet](https://img.shields.io/nuget/v/CoinMarketCapApiV2Client.svg)](https://www.nuget.org/packages/CoinMarketCapApiV2Client/)
 
 CoinMarketCap API v2 client written in .Net Standart 2.0
